@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Iris Species Prediction </title>
+    <head>
+        
+         <style>
+             body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://oir.mobi/uploads/posts/2021-09/1632072088_4-oir-mobi-p-iris-melkii-tsveti-krasivo-foto-4.jpg') no-repeat fixed;
+            background-size: cover;
+        }
+
+        h1, form {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <form method="GET" action="/predict_species">
+        <br>
+        <br>
+        <label><b>Sepal-Length:</b></label>
+        <input type="text" name="SepalLengthCm">
+        <br>
+
+        <label><b>Sepal-Width:</b></label>
+        <input type="text" name="SepalWidthCm">
+        <br>
+
+        <label><b>Petal-Length:</b></label>
+        <input type="text" name="PetalLengthCm">
+        <br>
+
+        <label><b>Petal-Width:</b></label>
+        <input type="text" name="PetalWidthCm">
+        <br>
+
+        <input type="submit" value="SUBMIT">
+        <br>
+
+        <p><b>The predicted species of flower is {{ prediction }}</b></p>
+    </form>
+</body>
+</html>
